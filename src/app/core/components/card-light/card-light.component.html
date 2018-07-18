@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header" [ngClass]="{noBackColor:!isBackColor}">
+    <h4 class="card-title" [innerHTML]="cardTitle"></h4>
+    <div class="float-right">
+      <ng-content select="[tool]"></ng-content>
+    </div>
+  </div>
+  <div class="card-block" [ngClass]="{paddingTop0:!isBackColor}">
+    <ng-content></ng-content>
+  </div>
+</div>

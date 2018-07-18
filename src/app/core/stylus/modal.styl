@@ -1,0 +1,186 @@
+@keyframes modalEnterIn {
+    0% {
+        transform: translate(-10px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.modal-dialog
+    animation: modalEnterIn 0.3s
+    overflow: visible
+.modal-content
+    border-radius: 3px
+.modal-header
+    padding: 12px 15px 11px
+.modal-title
+    font-size: 14px
+.modal-body
+    padding: 24px 20px 20px
+.modal-footer
+    padding: 1rem 0
+    margin: 0 60px
+.modal-lg
+    width: 1080px
+    // min-width: 1050px
+    max-width: 1170px
+    // overflow-y: auto
+    >.modal-content
+        border: none
+.close
+    color white
+    opacity 0.6
+    &:focus, &:hover
+        color white
+        opacity 0.8
+
+titleIcon =
+    content ''
+    display inline-block
+    margin-right 7px
+    vertical-align baseline
+    height 12px
+    width 12px
+    background-image url(./assets/layout/panel-title.png)
+    background-repeat no-repeat
+    background-size 100% 100%
+    background-position top
+
+// 黑色对话框
+.dark-modal
+.med-dark-modal
+.dark-modal-in-second
+.dark-modal-in-third
+    .modal-dialog
+        max-width 1170px
+    .modal-content
+        background-color: #29292c
+        border: 1px solid #414245
+        overflow: hidden
+        color: #c8c8c8
+        .text-danger
+            color: #da251d !important
+        .request-error
+            color: #da251d !important
+        .btn-secondary
+            color: #fff
+            background-color: #484852
+            border-color: #484852
+            &:hover
+                color: #fff
+                background-color: #23272b
+                border-color: #1d2124
+    .modal-header
+        padding: 13px 20px 12px
+        border-bottom: 1px solid #414245
+        background-image: repeating-linear-gradient(-45deg, #28282C 0px, #28282C 2px, transparent 3px, transparent 5px, #28282C 6px), repeating-linear-gradient(45deg, #131517 0px, #131517 2px, #28282C 3px, #28282C 5px, #131517 6px)
+        .modal-title
+            &::before
+                {titleIcon}
+    .modal-body
+        padding 24px 60px 20px 60px
+        .hyperMSDropDown
+            background-color: #343435 !important
+            .hyperMSInput
+                background: transparent
+                border-color: #414245
+            .hyperMSControllerBox
+                border-bottom: 1px solid #414245
+                .hyperMSButton
+                    background-image: none
+                .form-control
+                    color: #c8c8c8
+            .hyperMSOptionsBox
+                .selected
+                    background-color: rgba(72, 72, 82, 0.5)
+                .option.listItem
+                    border: 1px solid #484852
+                    &:hover
+                        background-image: none
+                        background-color: #484852
+    .modal-footer
+        border-top: none
+        padding: 1rem 0
+        margin: 0 60px
+        border-top 1px solid #414245
+.med-dark-modal
+    background-color: rgba(0,0,0,0.2)
+    overflow-x: hidden
+    overflow-y: auto
+    .modal-dialog
+        max-width 700px
+        margin-top 150px
+// 模态框要满足三层交互行为
+// 亮色对话框
+.light-modal
+.light-modal-in-second
+.light-modal-in-third
+.light-modal-in-forth
+    .modal-header
+        background-color #616264
+        border-radius: 3px 3px 0 0
+        color #fff
+        .modal-title
+            &::before
+                {titleIcon}
+.med-light-modal
+    background-color: rgba(0,0,0,0.2)
+    overflow-x: hidden
+    overflow-y: auto
+    .modal-header
+        background-color #616264
+        border-radius: 3px 3px 0 0
+        color #fff
+        .modal-title
+            &::before
+                {titleIcon}
+    .modal-dialog
+        max-width 700px
+        margin-top 150px
+
+// 等价于 modal-open,
+// 为了实现多层模态框，第一层模态框要手工给body加上此类
+.first-modal
+    overflow: hidden
+    .modal
+        overflow-x: hidden
+        overflow-y: auto
+// 第二层模态框要手工给body加上此类
+.second-modal
+    .light-modal
+    .dark-modal
+        display: none !important
+    .modal-backdrop:nth-of-type(2)
+        display: none !important
+    .modal
+        overflow-x: hidden
+        overflow-y: auto
+
+// 第三层模态框要手工给body加上此类
+.third-modal
+    .light-modal
+    .dark-modal
+    .light-modal-in-second
+    .dark-modal-in-second
+        display: none !important
+    .modal-backdrop:nth-of-type(3)
+        display: none !important
+    .modal
+        overflow-x: hidden
+        overflow-y: auto
+// 第四层模态框要手工给body加上此类
+.forth-modal
+    .light-modal
+    .dark-modal
+    .light-modal-in-second
+    .dark-modal-in-second
+    .light-modal-in-third
+    .dark-modal-in-third
+        display: none !important
+    .modal-backdrop:nth-of-type(4)
+        display: none !important
+    .modal
+        overflow-x: hidden
+        overflow-y: auto

@@ -1,0 +1,23 @@
+<ul class="nav">
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link active" routerLink="dashboard">首页</a>
+  </li>
+  <li class="nav-item" >
+    <a class="nav-link" href="javascript:;">威胁监控</a>
+    <ul>
+      <li routerLinkActive="active"><a class="nav-link" routerLink="business-monitor">业务监控</a></li>
+      <li><a class="nav-link">流量监控</a></li>
+    </ul>
+  </li>
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link">场景管理</a>
+  </li>
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link disabled" routerLink="sysconfig">系统配置</a>
+  </li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+

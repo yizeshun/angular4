@@ -1,0 +1,6 @@
+{
+  "/bsa_tam2": {
+    "target": "http://10.67.1.175:5555",
+    "secure": false
+  }
+}
